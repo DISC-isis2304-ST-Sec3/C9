@@ -15,5 +15,5 @@ public class Gimnasio {
     private int idGym;
 
     private Servicio idServicio; 
-    
+
 }
