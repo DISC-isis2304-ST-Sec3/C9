@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name ="horariosGym")
-public class horarioGym {
+public class HorarioGym {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,13 +17,13 @@ public class horarioGym {
     private int horaInicio;
     private int horaFin; 
    
-   public horarioGym(int horaInicio, int horaFin){
+   public HorarioGym(int horaInicio, int horaFin){
 
     this.horaInicio = horaInicio;
     this.horaFin = horaFin;
    }
 
-   public horarioGym(){
+   public HorarioGym(){
     ;
    }
 
