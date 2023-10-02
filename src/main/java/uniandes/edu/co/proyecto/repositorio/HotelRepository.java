@@ -14,22 +14,22 @@ public interface HotelRepository extends JpaRepository <Hotel, Integer>{
     @Query (value = "SELECT * FROM hoteles", nativeQuery = true)
     Collection<Hotel> darHoteles();
 
-    @Query (value = "SELECT * FROM hoteles WHERE id :id", nativeQuery = true)
+    @Query (value = "SELECT * FROM hoteles WHERE idHotel :id", nativeQuery = true)
     Hotel darHotel(@Param("id") int id);
 
 
     @Modifying 
     @Transactional
-    @Query (value = "INSERT INTO hoteles (id, nombre, ubicacion, estrellas) VALUES(hoteleros_sequence.nextval, :nombre, :ubicacion, :estrellas)", nativeQuery = true)
+    @Query (value = "INSERT INTO hoteles (idHotel, nombre, ubicacion, estrellas) VALUES(hoteleros_sequence.nextval, :nombre, :ubicacion, :estrellas)", nativeQuery = true)
     void insertarHotel(@Param ("nombre") String nombre, @Param ("ubicacion") String ubicacion, @Param ("estrellas") Integer estrellas);
 
     @Modifying 
     @Transactional
-    @Query (value = "UPDATE hoteles SET nombre =:nombre, ubicacion =:ubicacion, estrellas =:estrellas WHERE id=id", nativeQuery = true)
+    @Query (value = "UPDATE hoteles SET nombre =:nombre, ubicacion =:ubicacion, estrellas =:estrellas WHERE idHotel = id", nativeQuery = true)
     void actualizarHotel(@Param("id") Integer id, @Param ("nombre") String nombre, @Param ("ubicacion") String ubicacion, @Param ("estrellas") Integer estrellas);
 
     @Modifying 
     @Transactional
-    @Query (value = "DELETE FROM hoteles WHERE id = :id", nativeQuery = true)
+    @Query (value = "DELETE FROM hoteles WHERE idHotel = :id", nativeQuery = true)
     void eliminarHotel(@Param("id") int id);
 }

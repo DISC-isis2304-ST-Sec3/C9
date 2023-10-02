@@ -17,15 +17,15 @@ public class Cliente {
     private String tipoDoc;
     private String nombre;
     private String correo;
-    private int ReservaHabitacion;
+    private int reservaHabitacion;
 
 
-    public Cliente(String tipoDoc, String nombre, String correo, int ReservaHabitacion){
+    public Cliente(String tipoDoc, String nombre, String correo, int reservaHabitacion){
         
         this.tipoDoc = tipoDoc;
         this.nombre = nombre;
         this.correo = correo;
-        this.ReservaHabitacion = ReservaHabitacion;
+        this.reservaHabitacion = reservaHabitacion;
 
     }
 
@@ -50,7 +50,7 @@ public class Cliente {
     }
 
     public int getReservaHabitacion() {
-        return ReservaHabitacion;
+        return reservaHabitacion;
     }
 
     public void setDocumentoC(int documentoC) {
@@ -70,7 +70,7 @@ public class Cliente {
     }
 
     public void setReservaHabitacion(int reservaHabitacion) {
-        ReservaHabitacion = reservaHabitacion;
+        this.reservaHabitacion = reservaHabitacion;
     }
 
     
