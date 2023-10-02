@@ -7,25 +7,26 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name ="gimnasios")
-public class Gimnasio {
-
+@Table(name ="reservasServicios")
+public class ReservaServicio {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idGym;
+    private int idReserva;
 
-    public Gimnasio(){
+    public ReservaServicio(){
         ;
     }
 
-    public int getIdGym() {
-        return idGym;
+    public int getIdReserva() {
+        return idReserva;
     }
 
-    public void setIdGym(int idGym) {
-        this.idGym = idGym;
+    public void setIdReserva(int idReserva) {
+        this.idReserva = idReserva;
     }
 
     
+
 
 }
